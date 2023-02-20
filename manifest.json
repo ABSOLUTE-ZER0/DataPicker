@@ -1,0 +1,37 @@
+{
+    "name": "DataPicker",
+    "version": "0.1.0",
+    "description": "Merkle - DataPicker Tool",
+    "permissions": [
+      "tabs", "cookies"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"],
+        "css": ["hm_main.css"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/logo.png",
+        "24": "assets/logo.png",
+        "32": "assets/logo.png"
+      },
+      "default_title": "DataPicker",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
